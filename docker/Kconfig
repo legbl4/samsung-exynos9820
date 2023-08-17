@@ -90,6 +90,8 @@ config DOCKER
 
 	select BLOCK
 
+	select CFQ_GROUP_IOSCHED
+
 	select BLK_CGROUP
 
 	select BLK_DEV_THROTTLING
@@ -255,7 +257,7 @@ config DOCKER_BTRFS
 
 	bool "Use btrfs"
 
-	default n
+	default y
 
 	depends on DOCKER
 
