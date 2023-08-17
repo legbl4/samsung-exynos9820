@@ -4,7 +4,7 @@ config DOCKER
 
 	bool "Docker support"
 
-	default n
+	default y
 
 	help
 
