@@ -321,4 +321,28 @@ config DOCKER_OVERLAY_FS
 
 
 
+config DOCKER_EXT3_FS
+
+	bool "Use ext3 fs"
+
+	default y
+
+	depends on DOCKER
+
+	help
+
+		Yes if want to use the EXT3 FS as backing filesystem (recommended)
+
+
+
+	select EXT3_FS
+
+	select EXT3_FS_XATTR
+
+	select EXT3_FS_POSIX_ACL
+
+	select EXT3_FS_SECURITY
+
+
+
 endmenu
